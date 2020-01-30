@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HighCharts from './highChart';
+import LineChart from './lineChart';
+import CandleChart from './candleChart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='d-flex flex-wrap p-3'>
+      <div className='col-lg-8 mx-auto' style={{marginBottom:'15px'}}>
+        <HighCharts />
+      </div>
+      <div className='col-lg-8 mx-auto'>
+        <CandleChart />
+      </div>
     </div>
   );
 }
